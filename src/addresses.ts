@@ -11,6 +11,7 @@ type ChainAddresses = {
   tickLensAddress?: string
   swapRouter02Address?: string
   v1MixedRouteQuoterAddress?: string
+  feeAddress?: string
 }
 
 const DEFAULT_NETWORKS = [ChainId.MAINNET, ChainId.GOERLI, ChainId.SEPOLIA]
@@ -88,6 +89,27 @@ const ARBITRUM_ONE_ADDRESSES: ChainAddresses = {
   tickLensAddress: '0xbfd8137f7d1516D3ea5cA83523914859ec47F573'
 }
 const POLYGON_ADDRESSES: ChainAddresses = DEFAULT_ADDRESSES
+
+// Haven1 addresses
+const HAVEN1_DEVNET_ADDRESSES: ChainAddresses = {
+  v3CoreFactoryAddress: '',
+  multicallAddress: '',
+  quoterAddress: '',
+  v3MigratorAddress: '',
+  nonfungiblePositionManagerAddress: '',
+  tickLensAddress: '',
+  feeAddress: ''
+}
+
+const HAVEN1_TESTNET_ADDRESSES: ChainAddresses = {
+  v3CoreFactoryAddress: '',
+  multicallAddress: '',
+  quoterAddress: '',
+  v3MigratorAddress: '',
+  nonfungiblePositionManagerAddress: '',
+  tickLensAddress: '',
+  feeAddress: ''
+}
 
 // celo v3 addresses
 const CELO_ADDRESSES: ChainAddresses = {
@@ -193,23 +215,9 @@ const BASE_GOERLI_ADDRESSES: ChainAddresses = {
 }
 
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
-  [ChainId.MAINNET]: MAINNET_ADDRESSES,
-  [ChainId.OPTIMISM]: OPTIMISM_ADDRESSES,
-  [ChainId.ARBITRUM_ONE]: ARBITRUM_ONE_ADDRESSES,
-  [ChainId.POLYGON]: POLYGON_ADDRESSES,
-  [ChainId.POLYGON_MUMBAI]: POLYGON_ADDRESSES,
-  [ChainId.GOERLI]: GOERLI_ADDRESSES,
-  [ChainId.CELO]: CELO_ADDRESSES,
-  [ChainId.CELO_ALFAJORES]: CELO_ADDRESSES,
-  [ChainId.BNB]: BNB_ADDRESSES,
-  [ChainId.OPTIMISM_GOERLI]: OPTIMISM_GOERLI_ADDRESSES,
-  [ChainId.OPTIMISM_SEPOLIA]: OPTIMISM_SEPOLIA_ADDRESSES,
-  [ChainId.ARBITRUM_GOERLI]: ARBITRUM_GOERLI_ADDRESSES,
-  [ChainId.ARBITRUM_SEPOLIA]: ARBITRUM_SEPOLIA_ADDRESSES,
-  [ChainId.SEPOLIA]: SEPOLIA_ADDRESSES,
-  [ChainId.AVALANCHE]: AVALANCHE_ADDRESSES,
-  [ChainId.BASE]: BASE_ADDRESSES,
-  [ChainId.BASE_GOERLI]: BASE_GOERLI_ADDRESSES
+  [ChainId.BASE_GOERLI]: BASE_GOERLI_ADDRESSES,
+  [ChainId.HAVEN1_TESTNET]: HAVEN1_TESTNET_ADDRESSES,
+  [ChainId.HAVEN1_DEVNET]: HAVEN1_DEVNET_ADDRESSES
 }
 
 /* V3 Contract Addresses */
